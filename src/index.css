@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ART LIMP BRASIL — Design System (Cloud White palette) */
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary — vivid trust blue */
+    --primary: 217 91% 55%;
+    --primary-foreground: 210 40% 99%;
+    --primary-glow: 213 94% 68%;
+    --primary-deep: 222 70% 30%;
+
+    --secondary: 213 30% 95%;
+    --secondary-foreground: 222 47% 18%;
+
+    --muted: 215 25% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 213 94% 96%;
+    --accent-foreground: 217 91% 35%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 65% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 217 91% 55%;
+
+    --radius: 0.875rem;
+
+    /* Gradients & shadows */
+    --gradient-hero: linear-gradient(135deg, hsl(222 70% 14%) 0%, hsl(217 91% 28%) 55%, hsl(213 94% 45%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(213 94% 98%) 0%, hsl(210 40% 99%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(213 94% 68%));
+    --shadow-card: 0 1px 2px hsl(222 47% 11% / 0.04), 0 8px 24px -12px hsl(217 91% 35% / 0.10);
+    --shadow-elevated: 0 4px 12px hsl(222 47% 11% / 0.06), 0 24px 48px -16px hsl(217 91% 35% / 0.18);
+    --shadow-glow: 0 8px 32px -8px hsl(217 91% 55% / 0.35);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
