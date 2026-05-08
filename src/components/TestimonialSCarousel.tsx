@@ -84,7 +84,7 @@ export default function TestimonialsCarousel() {
         const url = new URL(videoUrl);
         const videoId = url.searchParams.get("v");
 
-        return `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1&rel=0`;
+        return `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1&rel=0&modestbranding=1&enablejsapi=1&origin=https://vagas.artlimpbrasil.com.br`;
     };
 
     const scroll = (direction: "left" | "right") => {
@@ -262,15 +262,16 @@ export default function TestimonialsCarousel() {
 
                             <div className="aspect-video">
                                 <iframe
-                                    src={getYoutubeEmbedUrl(
-                                        selectedVideo.videoUrl,
-                                        selectedVideo.startTime
-                                    )}
-                                    title={`Depoimento de ${selectedVideo.name}`}
-                                    className="h-full w-full"
-                                    allow="autoplay; encrypted-media; picture-in-picture"
-                                    allowFullScreen
-                                    onLoad={() => setIsVideoLoading(false)}
+                                src={getYoutubeEmbedUrl(
+                                    selectedVideo.videoUrl,
+                                    selectedVideo.startTime
+                                )}
+                                title={`Depoimento de ${selectedVideo.name}`}
+                                className="h-full w-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                onLoad={() => setIsVideoLoading(false)}
                                 />
                             </div>
                         </div>
