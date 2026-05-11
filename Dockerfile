@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 
 ARG VITE_BASE_PATH=/
-ARG VITE_API_URL=https://sistemas.artlimpbrasil.com.br/api-vagas
+ARG VITE_API_URL=https://sistemas.artlimpbrasil.com.br/api-vagas/api
 
 ENV VITE_BASE_PATH=$VITE_BASE_PATH
 ENV VITE_API_URL=$VITE_API_URL
