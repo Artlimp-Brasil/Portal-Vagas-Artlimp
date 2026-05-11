@@ -27,4 +27,4 @@ jobs:
           tags: artlimp/portal-vagas-artlimp:1.0.0
           build-args: |
             VITE_BASE_PATH=/
-            VITE_API_URL=https://sistemas.artlimpbrasil.com.br/api-vagas/api
+            VITE_API_URL=https://sistemas.artlimpbrasil.com.br/api-vagas
