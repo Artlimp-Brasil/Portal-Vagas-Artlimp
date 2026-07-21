@@ -9,7 +9,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src="https://www.artlimpbrasil.com.br/pub/media/logo/stores/1/logo-artlimp.png"
-            alt="Art Limp Brasil"
+            alt="Artlimp Brasil"
             className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
           />
 

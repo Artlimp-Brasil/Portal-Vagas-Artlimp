@@ -11,6 +11,10 @@ import {
   Sparkles,
   Gift,
   Clock,
+  Brain,
+  DollarSign,
+  TrendingUp
+
 } from "lucide-react";
 
 import Header from "@/components/Header";
@@ -26,7 +30,7 @@ const VagaDetalhe = () => {
   const job = slug ? getJobBySlug(slug) : undefined;
 
   useEffect(() => {
-    if (job) document.title = `${job.title} | ART LIMP BRASIL`;
+    if (job) document.title = `${job.title} | ARTLIMP BRASIL`;
   }, [job]);
 
   if (!job) return <NotFound />;
@@ -89,9 +93,11 @@ const VagaDetalhe = () => {
                   ) : (
                     <>
                       <Block title="Sobre a vaga">
-                        <p className="text-muted-foreground leading-relaxed">
-                          {job.description}
-                        </p>
+                        <div className="space-y-4 text-muted-foreground leading-relaxed">
+                          {job.description.split("\n").map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                          ))}
+                        </div>
                       </Block>
 
                       <Block title="Responsabilidades" icon={ListChecks}>
@@ -105,6 +111,18 @@ const VagaDetalhe = () => {
                       {job.differentials.length > 0 && (
                         <Block title="Diferenciais" icon={Sparkles}>
                           <BulletList items={job.differentials} />
+                        </Block>
+                      )}
+
+                      {job.perfil && job.perfil.length > 0 && (
+                        <Block title="Perfil que Buscamos" icon={Sparkles}>
+                          <BulletList items={job.perfil} />
+                        </Block>
+                      )}
+
+                      {job.abilities && job.abilities.length > 0 && (
+                        <Block title="Competências e Habilidades" icon={Brain}>
+                          <BulletList items={job.abilities} />
                         </Block>
                       )}
 
@@ -164,6 +182,7 @@ const Block = ({ title, icon: Icon, children }: BlockProps) => (
     {children}
   </div>
 );
+
 
 const BulletList = ({ items }: { items: string[] }) => (
   <ul className="space-y-2.5">

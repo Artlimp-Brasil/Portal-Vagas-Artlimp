@@ -25,6 +25,8 @@ export interface Job {
   steps: string[];
   regions?: JobRegion[];
   isActive: boolean;
+  perfil?: string[];
+  abilities?: string[];
   compensation?: {
     growthExpectation: string;
     commission: string;

@@ -42,7 +42,7 @@ const Home = () => {
                 Construa sua carreira em uma referência <span className="text-primary-glow">nacional</span>.
               </h1>
               <p className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl leading-relaxed">
-                Há mais de 30 anos, a ART LIMP BRASIL move o mercado de distribuição com inovação,
+                Há mais de 30 anos, a ARTLIMP BRASIL move o mercado de distribuição com inovação,
                 ética e profissionalismo. Faça parte do nosso time.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
@@ -128,7 +128,7 @@ const Home = () => {
               <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-2xl rounded-3xl" />
               <img
                 src={heroImg}
-                alt="Centro de distribuição ART LIMP"
+                alt="Centro de distribuição ARTLIMP"
                 loading="lazy"
                 width={1920}
                 height={1080}

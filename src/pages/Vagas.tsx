@@ -84,7 +84,7 @@ const Vagas = () => {
   }, [groupedJobs]);
 
   useEffect(() => {
-    document.title = "Vagas disponíveis | ART LIMP BRASIL";
+    document.title = "Vagas disponíveis | ARTLIMP BRASIL";
   }, []);
 
   useEffect(() => {
@@ -97,7 +97,7 @@ const Vagas = () => {
     }
 
     setSearchParams(next, { replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [filters.query]);
 
   return (

@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Marca */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="font-display text-lg font-bold text-white">
-              ART LIMP BRASIL
+              ARTLIMP BRASIL
             </div>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-400">
@@ -155,7 +155,7 @@ const Footer = () => {
       <div className="border-t border-slate-800">
         <div className="container-page flex flex-col gap-2 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <span>
-            © {new Date().getFullYear()} ART LIMP BRASIL. Todos os direitos
+            © {new Date().getFullYear()} ARTLIMP BRASIL. Todos os direitos
             reservados.
           </span>
 
